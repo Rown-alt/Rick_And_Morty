@@ -18,7 +18,7 @@ class ListFragment : Fragment(R.layout.character_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel.getAllCharacters()
         viewModel.charactersInEpisode.observe(viewLifecycleOwner) {
             adapter.setCharacters(it)
         }
