@@ -6,6 +6,6 @@ import com.example.rickandmortyapi.api.Repository
 
 class SharedViewModelFactory(private val repository: Repository) : ViewModelProvider.Factory{
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return SharedViewModel(repository) as T
+        return SharedViewModel() as T
     }
 }

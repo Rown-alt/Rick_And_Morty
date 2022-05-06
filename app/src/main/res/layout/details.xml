@@ -9,40 +9,40 @@
     >
 
     <TextView
-        android:id="@+id/characterName"
+        android:id="@+id/characterName_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Name"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/characterStatus"
+        app:layout_constraintEnd_toStartOf="@+id/characterStatus_Details"
         app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toEndOf="@+id/characterID"
+        app:layout_constraintStart_toEndOf="@+id/characterID_Details"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/characterSpecies"
+        android:id="@+id/characterSpecies_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Species"
         tools:textAlignment="center"
         android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/characterLocation"
-        app:layout_constraintStart_toEndOf="@+id/characterGender"
-        app:layout_constraintTop_toBottomOf="@+id/characterName" />
+        app:layout_constraintEnd_toStartOf="@+id/characterLocation_Details"
+        app:layout_constraintStart_toEndOf="@+id/characterGender_Details"
+        app:layout_constraintTop_toBottomOf="@+id/characterName_Details" />
 
     <TextView
-        android:id="@+id/characterGender"
+        android:id="@+id/characterGender_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Gender"
         android:layout_marginTop="15dp"
         android:layout_marginStart="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/characterID" />
+        app:layout_constraintTop_toBottomOf="@+id/characterID_Details" />
 
     <TextView
-        android:id="@+id/characterStatus"
+        android:id="@+id/characterStatus_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/characterID"
+        android:id="@+id/characterID_Details"
         android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -64,51 +64,51 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/characterLocation"
+        android:id="@+id/characterLocation_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Location"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/characterStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/characterStatus_Details" />
 
 
     <TextView
-        android:id="@+id/characterOrigin"
+        android:id="@+id/characterOrigin_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Origin"
         android:layout_marginTop="15dp"
         android:layout_marginStart="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/characterGender" />
+        app:layout_constraintTop_toBottomOf="@+id/characterGender_Details" />
 
     <TextView
-        android:id="@+id/characterType"
+        android:id="@+id/characterType_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Type"
         android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/characterEpisode"
-        app:layout_constraintStart_toEndOf="@+id/characterOrigin"
-        app:layout_constraintTop_toBottomOf="@+id/characterSpecies" />
+        app:layout_constraintEnd_toStartOf="@+id/characterEpisode_Details"
+        app:layout_constraintStart_toEndOf="@+id/characterOrigin_Details"
+        app:layout_constraintTop_toBottomOf="@+id/characterSpecies_Details" />
 
     <TextView
-        android:id="@+id/characterEpisode"
+        android:id="@+id/characterEpisode_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         tools:text="Episode"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/characterLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/characterLocation_Details" />
 
     <ImageView
-        android:id="@+id/characterImage"
+        android:id="@+id/characterImage_Details"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/characterName"
+        app:layout_constraintBottom_toTopOf="@+id/characterName_Details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -13,7 +13,7 @@ data class Character(
     var gender : String,
     var origin : LocationData,
     var location : LocationData,
-    var imageUrl : String,
+    var image : String,
     var episode : List<String>,
     var url : String,
     var created : String

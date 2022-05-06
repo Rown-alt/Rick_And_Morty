@@ -4,18 +4,21 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.rickandmortyapi.api.Repository
+import com.example.rickandmortyapi.api.RetrofitInstance
 import com.example.rickandmortyapi.model.Character
 import kotlinx.coroutines.launch
 
-class SharedViewModel(private val repository: Repository) : ViewModel() {
+class SharedViewModel() : ViewModel() {
 
-    val charactersInEpisode = MutableLiveData<List<Character>>()
-
-    fun getAllCharacters(){
+    var charactersInEpisode = MutableLiveData<List<Character>>()
+    fun getCharacters(page: Int) {
         viewModelScope.launch {
-            val characters = repository.getAllCharacters()
-            charactersInEpisode.value = characters.characters
+                charactersInEpisode.value = RetrofitInstance.api.getCharacters(page).results
+            for (i in 1..42){
+                charactersInEpisode.value =
+                    charactersInEpisode.value!! + RetrofitInstance.api.getCharacters(i).results
+
+        }
         }
     }
-
 }
