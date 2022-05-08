@@ -14,7 +14,7 @@ class SharedViewModel() : ViewModel() {
     fun getCharacters(page: Int) {
         viewModelScope.launch {
                 charactersInEpisode.value = RetrofitInstance.api.getCharacters(page).results
-            for (i in 1..42){
+            for (i in 2..42){
                 charactersInEpisode.value =
                     charactersInEpisode.value!! + RetrofitInstance.api.getCharacters(i).results
 
