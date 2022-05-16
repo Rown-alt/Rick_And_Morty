@@ -41,7 +41,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.CharacterViewHolder
         holder.bind(listCharacters[position])
 
         holder.itemView.setOnClickListener { view ->
-            val action = ListFragmentDirections.actionListFragmentToCharacterFragment(listCharacters[position])
+            val action = ListFragmentDirections.actionListFragmentToCharacterFragment(listCharacters[position].id)
             view.findNavController().navigate(action)
         }
     }

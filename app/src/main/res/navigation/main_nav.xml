@@ -20,9 +20,9 @@
         android:name="com.example.rickandmortyapi.fragments.CharacterFragment"
         >
         <argument
-        android:name="character"
-        app:argType="com.example.rickandmortyapi.model.Character"
-        /></fragment>
+            android:name="characterId"
+            app:argType="integer" />
+    </fragment>
 
 
 </navigation>
