@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface SimpleApi {
     @GET("character")
-    suspend fun getCharacters(@Query("page") page : Int) : CharacterList
+    suspend fun getCharacters(@Query("page") page : Int) : Result<CharacterList>
     @GET("character/{id}")
-    suspend fun getCharacterById(@Path("id") characterId : Int) : Character
+    suspend fun getCharacterById(@Path("id") characterId : Int) : Result<Character>
 }

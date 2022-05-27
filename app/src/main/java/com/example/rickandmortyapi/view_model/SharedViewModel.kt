@@ -12,17 +12,22 @@ class SharedViewModel() : ViewModel() {
     var charactersInEpisode = MutableLiveData<List<Character>>()
     fun getCharacters(page: Int) {
         viewModelScope.launch {
-                charactersInEpisode.value = RetrofitInstance.api.getCharacters(page).results
+                RetrofitInstance.api.getCharacters(page).onSuccess {
+                    charactersInEpisode.value = it.results
+                }
             for (i in 2..42){
-                charactersInEpisode.value =
-                    charactersInEpisode.value!! + RetrofitInstance.api.getCharacters(i).results
-
+                RetrofitInstance.api.getCharacters(i).onSuccess {
+                    charactersInEpisode.value =
+                        charactersInEpisode.value!! + it.results
+                }
         }
         }
     }
     fun getCharacterById(id : Int){
         viewModelScope.launch {
-            character.value = RetrofitInstance.api.getCharacterById(id)
+            RetrofitInstance.api.getCharacterById(id).onSuccess {
+                character.value = it
+            }
         }
     }
 }

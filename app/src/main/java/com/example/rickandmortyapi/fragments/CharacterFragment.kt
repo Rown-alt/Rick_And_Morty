@@ -7,12 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.rickandmortyapi.R
 import com.example.rickandmortyapi.view_model.SharedViewModel
 import com.squareup.picasso.Picasso
-import org.w3c.dom.Text
 
 class CharacterFragment : Fragment(R.layout.details) {
     val args : CharacterFragmentArgs by navArgs()
